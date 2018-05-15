@@ -1,3 +1,12 @@
-<p>
-  company-info works!
-</p>
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <a [routerLink]="['']" router>home</a>
+        <a [routerLink]="['/companyinfo']" router>companyinfo</a>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+        </button>
+    </div>
+</mat-drawer-container>

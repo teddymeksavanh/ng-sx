@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SpacexApiService } from 'src/app/services/backend/spacex-api.service';
 import { QueryStringOptions } from 'src/app/models/queryStringOption';
 import { HttpParams } from '@angular/common/http';
+import { AppReadyEvent } from 'src/app/app-ready.component';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +13,11 @@ export class AppComponent implements OnInit {
   title = 'app';
 
   constructor(
+    private appReadyEvent: AppReadyEvent,
     private spacexApi: SpacexApiService
-  ) {}
+  ) {
+    appReadyEvent.trigger();
+  }
 
   ngOnInit(): void {
     this.fetchCompanyInfo();
@@ -54,5 +58,9 @@ export class AppComponent implements OnInit {
             console.log('launches', data);
           }
         );
+  }
+
+  onActivate = (e) => {
+    window.scrollTo(0, 0);
   }
 }

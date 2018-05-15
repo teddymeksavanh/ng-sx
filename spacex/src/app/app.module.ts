@@ -6,9 +6,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 // Components
 import { AppComponent } from './app.component';
-import { CompanyInfoComponent } from './components/company-info/company-info.component'';
+import { AppReadyEvent } from './app-ready.component';
+import { CompanyInfoComponent } from './components/company-info/company-info.component';
 
-// Services
+// Modules
+import { SharedModule } from 'src/app/modules/shared/shared.module';
+import { RoutingModule } from 'src/app/modules/routing/routing.module';
 
 @NgModule({
   declarations: [
@@ -17,9 +20,13 @@ import { CompanyInfoComponent } from './components/company-info/company-info.com
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule,
+    RoutingModule
   ],
-  providers: [],
+  providers: [
+    AppReadyEvent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
