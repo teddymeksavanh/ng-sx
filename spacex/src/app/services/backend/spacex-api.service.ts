@@ -25,10 +25,9 @@ export class SpacexApiService {
   }
 
   getLaunches = (endpoint: string = '', params: QueryStringOptions = new QueryStringOptions()): Observable<RootObject[]> => {
-    const httpParams = new HttpParams();
-    Object.keys(params).map(param => {
-      const key = Object.keys(param)[0];
-      httpParams.append(key, param[key]);
+    let httpParams = new HttpParams();
+    Object.keys(params).forEach(key => {
+      httpParams = httpParams.append(key, params[key]);
     });
     let requestEndpoint = this.baseUrl + '/launches/';
     switch (endpoint) {
