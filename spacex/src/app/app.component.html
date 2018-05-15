@@ -1,2 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<router-outlet (activate)="onActivate($event)"></router-outlet>
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <a class="d-block" routerLink="/" router>home</a>
+        <a class="d-block" routerLink="/companyinfo" router>companyinfo</a>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+        </button>
+    </div>
+
+    <router-outlet (activate)="onActivate($event)"></router-outlet>
+</mat-drawer-container>
+
