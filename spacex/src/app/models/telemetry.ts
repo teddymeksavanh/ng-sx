@@ -1,3 +1,3 @@
 export class Telemetry {
-    flight_club: string;
+    flight_club?: string;
 }

@@ -1,5 +1,5 @@
 export interface Headquarters {
-    address: string;
-    city: string;
-    state: string;
+    address?: string;
+    city?: string;
+    state?: string;
 }

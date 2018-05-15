@@ -24,7 +24,12 @@ export class SpacexApiService {
               );
   }
 
-  getLaunches = (endpoint: string = '', params = {}): Observable<RootObject[]> => {
+  getLaunches = (endpoint: string = '', params: QueryStringOptions = new QueryStringOptions()): Observable<RootObject[]> => {
+    const httpParams = new HttpParams();
+    Object.keys(params).map(param => {
+      const key = Object.keys(param)[0];
+      httpParams.append(key, param[key]);
+    });
     let requestEndpoint = this.baseUrl + '/launches/';
     switch (endpoint) {
       case 'latest':
@@ -39,7 +44,7 @@ export class SpacexApiService {
     }
     return this.http.get<RootObject[]>(
               requestEndpoint,
-              {params: params}
+              {params: httpParams}
               )
               .pipe(
                 catchError(this.handleError)
