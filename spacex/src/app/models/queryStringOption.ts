@@ -32,4 +32,16 @@ export class QueryStringOptions {
     land_success?: string;
     landing_type?: string;
     landing_vehicle?: string;
+    capsule_serial?: string;
+    capsule_id?: number;
+    status?: string;
+    original_launch?: string;
+    missions?: string;
+    landings?: string;
+    type?: string;
+    rtls_attempt?: string;
+    rtls_landings?: string;
+    asds_attempt?: string;
+    asds_landings?: string;
+    water_landing?: string;
 }
