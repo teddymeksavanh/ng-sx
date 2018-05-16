@@ -9,7 +9,11 @@ import { AppReadyEvent } from 'src/app/app-ready.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'app';
+  public title = 'app';
+  public menu = [
+    { path: '/', name: 'Home' },
+    { path: '/companyinfo', name: 'Companies' }
+  ];
 
   constructor(
     private appReadyEvent: AppReadyEvent
