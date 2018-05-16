@@ -1,0 +1,17 @@
+.example-sidenav{
+    padding: 20px;
+}
+
+.sidenav-link{
+    padding: 10px 0;
+}
+
+.example-sidenav-content{
+    background-color: #de4f4f;
+    color: #ffffff;
+    padding: 10px; 
+}
+
+.example-container{
+    height: 100%;
+}

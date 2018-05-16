@@ -12,7 +12,13 @@ export class AppComponent implements OnInit {
   public title = 'app';
   public menu = [
     { path: '/', name: 'Home' },
-    { path: '/companyinfo', name: 'Companies' }
+    { path: '/companies', name: 'Companies' },
+    { path: '/rockets', name: 'Rockets' },
+    { path: '/capsules', name: 'Capsules' },
+    { path: '/detailedcapsules', name: 'Detailed capsules' },
+    { path: '/launchpads', name: 'Launchpads' },
+    { path: '/launches', name: 'Launches' },
+    { path: '/detailedcores', name: 'Detailed cores' },
   ];
 
   constructor(

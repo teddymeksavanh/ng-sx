@@ -6,9 +6,33 @@ import { CompanyInfoComponent } from 'src/app/components/company-info/company-in
 
 const appRoutes: Routes = [
   {
-    path: 'companyinfo',
+    path: 'companies',
     component: CompanyInfoComponent
-  }
+  },
+  {
+    path: 'rockets',
+    component: CompanyInfoComponent
+  },
+  {
+    path: 'capsules',
+    component: CompanyInfoComponent
+  },
+  {
+    path: 'launchpads',
+    component: CompanyInfoComponent
+  },
+  {
+    path: 'launches',
+    component: CompanyInfoComponent
+  },
+  {
+    path: 'detailedcapsules',
+    component: CompanyInfoComponent
+  },
+  {
+    path: 'detailedcores',
+    component: CompanyInfoComponent
+  },
 ];
 
 @NgModule({
