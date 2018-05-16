@@ -11,14 +11,14 @@ import { AppReadyEvent } from 'src/app/app-ready.component';
 export class AppComponent implements OnInit {
   public title = 'app';
   public menu = [
-    { path: '/', name: 'Home' },
-    { path: '/companies', name: 'Companies' },
-    { path: '/rockets', name: 'Rockets' },
-    { path: '/capsules', name: 'Capsules' },
-    { path: '/detailedcapsules', name: 'Detailed capsules' },
-    { path: '/launchpads', name: 'Launchpads' },
-    { path: '/launches', name: 'Launches' },
-    { path: '/detailedcores', name: 'Detailed cores' },
+    { path: '/', name: 'Dashboard', icon: 'dashboard' },
+    { path: '/companies', name: 'Companies', icon: 'info' },
+    { path: '/rockets', name: 'Rockets', icon: 'flash_on' },
+    { path: '/capsules', name: 'Capsules', icon: 'polymer' },
+    { path: '/detailedcapsules', name: 'Detailed capsules', icon: 'polymer' },
+    { path: '/launchpads', name: 'Launchpads', icon: 'dock' },
+    { path: '/launches', name: 'Launches', icon: 'launch' },
+    { path: '/detailedcores', name: 'Detailed cores', icon: 'wb_iridescent' },
   ];
 
   constructor(

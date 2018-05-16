@@ -12,11 +12,13 @@ import { CompanyInfoComponent } from './components/company-info/company-info.com
 // Modules
 import { SharedModule } from 'src/app/modules/shared/shared.module';
 import { RoutingModule } from 'src/app/modules/routing/routing.module';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CompanyInfoComponent
+    CompanyInfoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

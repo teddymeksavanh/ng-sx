@@ -1,12 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <mat-drawer-container class="example-container" autosize>
     <mat-drawer #drawer class="example-sidenav" mode="side">
-        <p><a *ngFor="let m of menu" class="d-block sidenav-link" routerLink="{{m.path}}" router>{{m.name}}</a></p>
+            <mat-nav-list>
+                <p>
+                    <a mat-list-item *ngFor="let m of menu" class="d-block sidenav-link" routerLink="{{m.path}}" router>
+                    <mat-icon>{{ m.icon }}</mat-icon>
+                    {{ m.name }}
+                    </a>
+                </p>
+            </mat-nav-list>
     </mat-drawer>
     
     <div class="example-sidenav-content">
-        <button type="button" mat-button (click)="drawer.toggle()">
-        Toggle sidenav
+        <button type="button" mat-icon-button (click)="drawer.toggle()">
+            <mat-icon>menu</mat-icon>
         </button>
     </div>
     <router-outlet (activate)="onActivate($event)"></router-outlet>
