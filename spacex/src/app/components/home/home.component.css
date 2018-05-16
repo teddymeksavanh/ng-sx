@@ -1,8 +1,0 @@
-.page-container .header{
-    margin:0;
-    padding:0;
-    background: url(/assets/bg-header-star.jpg) no-repeat center fixed; 
-    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-    background-size: cover; /* version standardisée */
-    height: 75vh;
-}

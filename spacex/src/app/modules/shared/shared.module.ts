@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ParticlesModule } from 'angular-particle';
 import {
   MatAutocompleteModule,
   MatBottomSheetModule,
@@ -75,7 +76,8 @@ import {
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule
+    MatTreeModule,
+    ParticlesModule
   ],
   imports: [
     CommonModule,
@@ -113,7 +115,8 @@ import {
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule
+    MatTreeModule,
+    ParticlesModule
   ],
   declarations: []
 })
