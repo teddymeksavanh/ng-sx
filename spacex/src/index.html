@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Spacex</title>
   <base href="/">
 
@@ -10,5 +11,120 @@
 </head>
 <body>
   <app-root></app-root>
+  <div id="pre-bootstrap-container">
+      
+  <script type="text/javascript">
+      // Listen for the "appready" event
+      document.addEventListener("appready", handleAppReady);
+
+      // Handle the "appready" event and teardown the loading screen.
+      function handleAppReady(event) {
+      var preBootstrapContainer = document.getElementById("pre-bootstrap-container");
+      var preBootstrap = document.getElementById("pre-bootstrap");
+
+      // Add the class-name to initiate the transitions.
+      preBootstrap.className = "loaded";
+
+      // Remove the bootstrap container after the transition has
+      // completed (based on the known transition time).
+      setTimeout(
+          function removeLoadingScreen() {
+              preBootstrapContainer.parentNode.removeChild(preBootstrapContainer);
+          },
+          500
+      );
+      }
+  </script>
+  <style type="text/css">
+      #loading-area {
+          width: 60px;
+          height: 60px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          margin: auto;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+      }
+
+      .spinner {
+          margin: 0 auto;
+          width: 50px;
+          height: 40px;
+          text-align: center;
+          font-size: 10px;
+      }
+
+      .spinner>div {
+          background-color: #333;
+          height: 100%;
+          width: 6px;
+          display: inline-block;
+          -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+          animation: sk-stretchdelay 1.2s infinite ease-in-out;
+      }
+
+      .spinner .rect2 {
+          -webkit-animation-delay: -1.1s;
+          animation-delay: -1.1s;
+      }
+
+      .spinner .rect3 {
+          -webkit-animation-delay: -1.0s;
+          animation-delay: -1.0s;
+      }
+
+      .spinner .rect4 {
+          -webkit-animation-delay: -0.9s;
+          animation-delay: -0.9s;
+      }
+
+      .spinner .rect5 {
+          -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
+      }
+
+      @-webkit-keyframes sk-stretchdelay {
+          0%,
+          40%,
+          100% {
+              -webkit-transform: scaleY(0.4)
+          }
+          20% {
+              -webkit-transform: scaleY(1.0)
+          }
+      }
+
+      @keyframes sk-stretchdelay {
+          0%,
+          40%,
+          100% {
+              transform: scaleY(0.4);
+              -webkit-transform: scaleY(0.4);
+          }
+          20% {
+              transform: scaleY(1.0);
+              -webkit-transform: scaleY(1.0);
+          }
+      }
+  </style>
+
+  <div id="pre-bootstrap">
+      <div id="loading-area">
+          <div class="spinner">
+              <div class="rect1"></div>
+              <div class="rect2"></div>
+              <div class="rect3"></div>
+              <div class="rect4"></div>
+              <div class="rect5"></div>
+          </div>
+      </div>
+  </div>
+</div>
+      
 </body>
 </html>
