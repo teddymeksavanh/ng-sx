@@ -1,2 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<router-outlet (activate)="onActivate($event)"></router-outlet>
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+        <a *ngFor="let m of menu" class="d-block" routerLink="{{m.path}}" router>{{m.name}}</a>
+    </mat-drawer>
+
+    <div class="sidenav-content">
+        <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+        </button>
+    </div>
+
+    <router-outlet (activate)="onActivate($event)"></router-outlet>
+</mat-drawer-container>
+
