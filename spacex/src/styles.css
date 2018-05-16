@@ -4,8 +4,27 @@
 body, html{
     margin: 0;
     height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
-.d-block {
+.d-block{
     display: block;
+}
+
+.vertical-align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.spacex-btn{
+    background-color: #005288 !important;
+}
+
+.primary{
+    background-color: #005288 !important;
 }

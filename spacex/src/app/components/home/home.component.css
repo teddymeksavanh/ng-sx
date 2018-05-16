@@ -1,0 +1,22 @@
+.title-container{
+    height: 75vh;
+    color: #ffffff;
+}
+
+.title{
+    font-size: 45px;
+    padding: 15px 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+.description{
+    font-family: 'Roboto', sans-serif;
+    opacity: 0.5;
+}
+
+.spacex-btn{
+    width: 150px;
+    margin-top: 25px;
+}

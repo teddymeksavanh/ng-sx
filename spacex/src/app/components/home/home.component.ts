@@ -12,7 +12,10 @@ export class HomeComponent implements OnInit {
     'background': 'url(/assets/bg-header-star.jpg) no-repeat center fixed',
     '-webkit-background-size': 'cover',
     'background-size': 'cover',
-    'height': '75vh'
+    'position': 'absolute',
+    'width': '100%',
+    'height': '75%',
+    'z-index': -1
   };
 
   public options =
