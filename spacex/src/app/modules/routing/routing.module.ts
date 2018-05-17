@@ -16,7 +16,7 @@ const appRoutes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'companies',
+    path: 'company',
     component: CompanyInfoComponent
   },
   {

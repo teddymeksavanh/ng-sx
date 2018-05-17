@@ -124,9 +124,9 @@ export class SpacexApiService {
               );
   }
 
-  getCompanyInfo = (): Observable<CompanyInfo[]> => {
+  getCompanyInfo = (): Observable<CompanyInfo> => {
     const requestEndpoint = this.baseUrl + '/info';
-    return this.http.get<CompanyInfo[]>(requestEndpoint)
+    return this.http.get<CompanyInfo>(requestEndpoint)
               .pipe(
                 catchError(this.handleError)
               );

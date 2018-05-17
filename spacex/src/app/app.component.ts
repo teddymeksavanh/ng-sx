@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   public title = 'app';
   public menu = [
     { path: '/', name: 'Dashboard', icon: 'dashboard' },
-    { path: '/companies', name: 'Companies', icon: 'info' },
+    { path: '/company', name: 'Company', icon: 'info' },
     { path: '/rockets', name: 'Rockets', icon: 'flash_on' },
     { path: '/capsules', name: 'Capsules', icon: 'polymer' },
     { path: '/detailedcapsules', name: 'Detailed capsules', icon: 'polymer' },

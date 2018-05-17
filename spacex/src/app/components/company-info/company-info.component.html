@@ -1,3 +1,67 @@
-<pre>
-    {{ companies | async | json }}
-</pre>
+<div class="page-container">
+    <div class="header">
+        <particles [style]="style" [width]="100" [height]="100" [params]="options"></particles>
+        <div class="vertical-align title-container">
+            <div class="text-center">
+                <span class="title">SpaceX</span>
+                <span class="subtitle d-block">An innovative company</span>
+                <span class="description d-block" *ngIf="company.summary">
+                    {{ company.summary }}
+                </span>
+                <mat-grid-list cols="4" rowHeight="2:1">
+                    <mat-grid-tile>
+                        <div class="element-facts" *ngIf="company.founder">
+                            <div class="element-content">{{ company.founder }}</div>
+                            <div class="element-title">Founder</div>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div class="element-facts" *ngIf="company.founded">
+                            <div class="element-content">{{ company.founded }}</div>
+                            <div class="element-title">Founded</div>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div class="element-facts" *ngIf="company.employees">
+                            <div class="element-content">{{ company.employees }}</div>
+                            <div class="element-title">Employees</div>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div class="element-facts" *ngIf="company.vehicles">
+                            <div class="element-content">{{ company.vehicles }}</div>
+                            <div class="element-title">Vehicles</div>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div class="element-facts" *ngIf="company.launch_sites">
+                            <div class="element-content">{{ company.launch_sites }}</div>
+                            <div class="element-title">Launch sites</div>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                    <div class="element-facts" *ngIf="company.test_sites">
+                        <div class="element-content">{{ company.test_sites }}</div>
+                        <div class="element-title">Test sites</div>
+                    </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                    <div class="element-facts" *ngIf="company.valuation">
+                        <div class="element-content">{{ company.valuation }}</div>
+                        <div class="element-title">Valuation</div>
+                    </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                    <div class="element-facts" *ngIf="company.headquarters">
+                        <div class="element-content">
+                            {{ company.headquarters.address }},
+                            {{ company.headquarters.city }}
+                        </div>
+                        <div class="element-title">Headquarters</div>
+                    </div>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </div>
+        </div>
+    </div>
+</div>
