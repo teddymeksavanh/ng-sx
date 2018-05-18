@@ -101,7 +101,7 @@ export class LandingLegs {
     material: string;
 }
 
-export class RootObject {
+export class Rocket {
     id: string;
     name: string;
     type: string;

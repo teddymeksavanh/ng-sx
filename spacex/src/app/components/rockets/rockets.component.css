@@ -3,6 +3,29 @@
     color: #ffffff;
 }
 
+.title-subcontainer{
+    padding: 50px;
+}
+
+.element-wrapper{
+    display: flex;
+}
+
+.element{
+    width: 50%;
+}
+
+.element-description{
+    height: 40px;
+    overflow-y: scroll;
+}
+
+.example-header-image{
+    background: url(/assets/company.jpg) no-repeat center !important;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
 .header{
     height: 100%;
 }
@@ -12,20 +35,21 @@
 }
 
 .mat-grid-tile{
-    background: #181c1f;
+    /* background: #181c1f; */
+    width: 250px;
 }
 
 .element-title{
     opacity: 0.3;
     font-size: 15px; 
+    margin-bottom: 10px;
 }
 
 .title{
     font-size: 45px;
-    padding: 15px 0;
+    padding: 25px 0;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    border-bottom: 1px solid #ffffff; 
 }
 
 .subtitle{
