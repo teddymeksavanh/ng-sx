@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { SpacexApiService } from 'src/app/services/backend/spacex-api.service';
-import { Observable } from 'rxjs';
-import { CompanyInfo } from 'src/app/models/companyInfo';
+import { Rocket } from 'src/app/models/rocket';
 import options from '../../../assets/particles.js';
 
 @Component({
-  selector: 'app-company-info',
-  templateUrl: './company-info.component.html',
-  styleUrls: ['./company-info.component.css']
+  selector: 'app-rockets',
+  templateUrl: './rockets.component.html',
+  styleUrls: ['./rockets.component.css']
 })
-export class CompanyInfoComponent implements OnInit {
-  public company: CompanyInfo;
+export class RocketsComponent implements OnInit {
+  public rockets: Rocket[];
 
   public particlesOptions = options;
 
@@ -31,18 +30,19 @@ export class CompanyInfoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.fetchCompanyInfo();
+    this.fetchRockets();
   }
 
-  fetchCompanyInfo = () => {
-    this.spacexApi.getCompanyInfo()
+  fetchRockets = () => {
+    this.spacexApi.getRockets()
       .subscribe(
         data => {
-          this.company = data;
+          this.rockets = data;
         },
         errors => {
           console.log('errors', errors);
         }
       );
   }
+
 }
