@@ -5,6 +5,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { CompanyInfoComponent } from 'src/app/components/company-info/company-info.component';
 import { HomeComponent } from 'src/app/components/home/home.component';
 import { RocketsComponent } from 'src/app/components/rockets/rockets.component';
+import { CapsulesComponent } from 'src/app/components/capsules/capsules.component';
+import { LaunchpadsComponent } from 'src/app/components/launchpads/launchpads.component';
+import { LaunchesComponent } from 'src/app/components/launches/launches.component';
+import { DetailedCapsulesComponent } from 'src/app/components/detailed-capsules/detailed-capsules.component';
+import { DetailedCoresComponent } from 'src/app/components/detailed-cores/detailed-cores.component';
+import { RocketDetailComponent } from 'src/app/components/rocket-detail/rocket-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -25,26 +31,30 @@ const appRoutes: Routes = [
     component: RocketsComponent
   },
   {
+    path: 'rockets/:id',
+    component: RocketDetailComponent
+  },
+  {
     path: 'capsules',
-    component: CompanyInfoComponent
+    component: CapsulesComponent
   },
   {
     path: 'launchpads',
-    component: CompanyInfoComponent
-  },
-  {
-    path: 'launches',
-    component: CompanyInfoComponent
-  },
-  {
-    path: 'detailedcapsules',
-    component: CompanyInfoComponent
-  },
-  {
-    path: 'detailedcores',
-    component: CompanyInfoComponent
-  },
+    component: LaunchpadsComponent
+  }
 ];
+    // {
+    //   path: 'launches',
+    //   component: LaunchesComponent
+    // },
+    // {
+    //   path: 'detailedcapsules',
+    //   component: DetailedCapsulesComponent
+    // },
+    // {
+    //   path: 'detailedcores',
+    //   component: DetailedCoresComponent
+    // },
 
 @NgModule({
   imports: [

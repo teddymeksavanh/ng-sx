@@ -3,8 +3,22 @@
     color: #ffffff;
 }
 
+.mat-card-title{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 .title-subcontainer{
     padding: 50px;
+}
+
+.fulltitle{
+    padding: 15px 0;
+}
+
+.mat-card-content{
+    margin-left: 5px;
 }
 
 .element-wrapper{
@@ -20,32 +34,10 @@
     overflow-y: scroll;
 }
 
-.search-wrapper{
-    margin-bottom: 30px;
-}
-
-.rocket-link{
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px 15px;
-}
-
 .example-header-image{
     background: url(/assets/company.jpg) no-repeat center !important;
     -webkit-background-size: cover;
     background-size: cover;
-}
-
-.example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-    background: white;
-}
-
-.example-full-width {
-    width: 100%;
 }
 
 .header{
@@ -57,7 +49,7 @@
 }
 
 .mat-grid-tile{
-    /* background: #181c1f; */
+    background: #181c1f;
     width: 250px;
 }
 
@@ -69,9 +61,10 @@
 
 .title{
     font-size: 45px;
-    padding: 25px 0;
+    padding: 50px 0 0 0;
     font-family: 'Roboto', sans-serif;
     text-align: center;
+    color: #181c1f;
 }
 
 .subtitle{
@@ -103,9 +96,4 @@
 
 .example-card {
     max-width: 400px;
-  }
-  
-.example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
 }

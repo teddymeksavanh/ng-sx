@@ -1,0 +1,37 @@
+<div class="page-container">
+    <div class="header">
+        <div class="title-container" *ngIf="launchpads">
+            <div class="full-width">
+                <span class="title text-center d-block">SpaceX : our launchpads.</span>
+                <div class="title-subcontainer">
+                  <mat-grid-list cols="3" rowHeight="3:2">
+                      <mat-grid-tile *ngFor="let launchpad of launchpads">
+                          <mat-card class="example-card">
+                              <mat-card-header>
+                                  <mat-card-title class="fulltitle" *ngIf="launchpad.full_name">{{ launchpad.full_name }}</mat-card-title>
+                              </mat-card-header>
+                              <mat-card-content>
+                                  <div class="element-facts">
+                                      <div class="element-content">{{ launchpad.status | titlecase }}</div>
+                                      <div class="element-title">Status</div>
+                                  </div>
+                                  <div class="element-facts">
+                                      <div class="element-content">{{ launchpad.location.name }}</div>
+                                      <div class="element-title">Location</div>
+                                  </div>
+                                  <div class="element-facts">
+                                      <div class="element-content">{{ launchpad.location.region }}</div>
+                                      <div class="element-title">Region</div>
+                                  </div>
+                                  <p class="element-description">
+                                      {{ launchpad.details }}
+                                  </p>
+                              </mat-card-content>
+                            </mat-card>
+                      </mat-grid-tile>
+                  </mat-grid-list>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

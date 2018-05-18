@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { SpacexApiService } from 'src/app/services/backend/spacex-api.service';
-import { Rocket } from 'src/app/models/rocket';
 import options from '../../../assets/particles.js';
+import { SpacexApiService } from 'src/app/services/backend/spacex-api.service';
+import { Capsule } from 'src/app/models/capsule';
 
 @Component({
-  selector: 'app-rockets',
-  templateUrl: './rockets.component.html',
-  styleUrls: ['./rockets.component.css']
+  selector: 'app-capsules',
+  templateUrl: './capsules.component.html',
+  styleUrls: ['./capsules.component.css']
 })
-export class RocketsComponent implements OnInit {
-  public rockets: Rocket[];
-  public searchText = '';
+export class CapsulesComponent implements OnInit {
+  public capsules: Capsule[];
 
   public particlesOptions = options;
 
@@ -31,14 +30,14 @@ export class RocketsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.fetchRockets();
+    this.fetchCapsules();
   }
 
-  fetchRockets = () => {
-    this.spacexApi.getRockets()
+  fetchCapsules = () => {
+    this.spacexApi.getCapsules()
       .subscribe(
         data => {
-          this.rockets = data;
+          this.capsules  = data;
         },
         errors => {
           console.log('errors', errors);

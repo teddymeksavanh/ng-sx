@@ -1,14 +1,11 @@
 <div class="page-container">
     <div class="header">
         <particles [style]="style" [width]="100" [height]="100" [params]="particlesOptions"></particles>
-        <div class="vertical-align title-container" *ngIf="rockets">
+        <div class="vertical-align title-container" *ngIf="rocket">
             <div class="full-width title-subcontainer">
-                <span class="title text-center d-block">SpaceX : our rockets.</span>
-                <div class="full-width search-wrapper vertical-align">
-                    <input class="d-block" [(ngModel)]="searchText" placeholder="Search by name">
-                </div>
-                <mat-grid-list cols="3">
-                    <mat-grid-tile *ngFor="let rocket of rockets | filter:searchText:'name'">
+                <span class="title text-center d-block">SpaceX : {{ rocket.name }}.</span>
+                <mat-grid-list cols="1">
+                    <mat-grid-tile>
                         <mat-card class="example-card">
                             <mat-card-header>
                                 <div mat-card-avatar class="example-header-image"></div>
@@ -58,7 +55,6 @@
                                     {{ rocket.description }}
                                 </p>
                             </mat-card-content>
-                            <a class="rocket-link" [routerLink]="['/rockets/', rocket.id]">See details</a>
                           </mat-card>
                     </mat-grid-tile>
                 </mat-grid-list>
